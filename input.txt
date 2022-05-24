@@ -1,0 +1,49 @@
+
+new_lot 10
+
+park GJ-1-2001 White
+park GJ-1-2002 White
+park GJ-2-2003 White
+park GJ-5-2004 Black
+park GJ-1-2006 Blue
+park GJ-1-2056 Red
+park GJ-12-2034 Red
+park GJ-13-2021 Red
+park GJ-15-2067 Red
+park GJ-1-2234 Black
+park GJ-1-2657 Yellow
+park GJ-16-2767 Yellow
+
+leave 3
+status
+
+park GJ-3-2212 Green
+park GJ-3-2054 Gray
+
+status
+
+all_cars_with_reg_no_using_color Red
+
+ticket_for_cars_with_color White
+
+ticket_for_reg_no GJ-1-20090
+
+leave 5
+leave 9
+leave 2
+
+status
+park GJ-4-2043 Green
+status
+
+park GJ-1-2121 White
+status
+
+leave 10
+leave 8
+leave 9
+
+status
+
+
+park GJ-1-1234 White 20

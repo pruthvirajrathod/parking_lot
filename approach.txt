@@ -1,0 +1,89 @@
+
++==how to run this code:==========+
+|> cd parking_lot/			      |
+|> cd .				      		  |
+|> bundle			              |
+|> bin/parking_lot input.txt 	  |
++=================================+
+
+
++===========================+
+|Approach to ParkingLot App |
++===========================+
+
+1) parking_lot script added in bin/ to start command line
+2) later we will use it as bin/parking_lot
+
+
+classes required?
+all this libraries created in lib/ 
+
+- car: to initialize car data (reg_no & color)
+- all_libs: includes all required libraries and add in base_module
+- base_module: to execute after starting command line
+- parking_app: read file and calling each methods described
+- parking_lot: have tickets array to check avail ticket and park car or remove car with/from ticket no.
+
+- input.txt: for reading file line by line in command line
+
+- base_module: created
+- all_libs: created
+- car: created
+
+
+* creating parknig_app library
+* creating hash in parknig_app initialize method to call different methods as given in input file
+
+1> creating start_app method to take file as input
+2> creating private method set_path for file path
+3> parse file line by line in read_file method 
+4> creating method to create new parking_lot by passing tickets as param
+
+
+* creating parking_lot library
+1> reading tickets
+2> intializing parking_lot array for given size during creation of parking_lot 
+
+*** now, able to create parking lot with cmd
+
+*** leaving perticular ticket no
+1> adding leave_scheduled method in hash
+2> parking lot class with ticket num as input
+3> leave_scheduled method for remove that ticket and set that ticket = nil in parking_lot
+
+*** checkig available tickets for given parking_lot if ticket is not present set to nil else return ticket no.
+
+*** adding one more condition in parse_file when method_call split size = 3
+
+* creating check_ticket method 
+	- check if ticket number is present or not
+	- if not present then create new car and park with ticket number else return error
+
+* parse_file when  method_call split size = 1
+	-creating show_data method in parking_app to check all available cars with reg no and color with ticket no.
+
+* fetching perticular data with fetch_data method when split size = 2
+*** fetching all cars reg_no using color param for available tokens
+*** fetching all ticket numbers using color param for available tokens
+*** fetching ticket number for given car reg_no param
+
+
+
++-----------------------------------+
+|Usable commands in input.txt file: | 
++-----------------------------------+
+
+-> 	create new parking_lot
+   		new_lot (size of lot in number)
+->	parking car
+		park (reg_no) (color)
+-> 	checking parking lot data
+		status
+-> 	check all cars reg_no with having same color
+		all_cars_with_reg_no_using_color (color)
+-> 	check tickets having same car colors
+		ticket_for_cars_with_color (color)
+-> 	check ticket no for perticular car registrastion no
+		ticket_for_reg_no (reg_no)
+-> 	remove perticular car using token no
+		leave (token_no)
